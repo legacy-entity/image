@@ -1,0 +1,9 @@
+{
+  "name": "image",
+  "version": "0.0.1",
+  "description": "image component",
+  "keywords": ["game","image","component"],
+  "author": "stagas",
+  "license": "MIT",
+  "scripts": ["index.js"]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>image</title>
+    <link rel="stylesheet" href="../build/build.css">
+    <style>
+
+body {
+  background: #090;
+  margin: 0;
+}
+
+#game {
+  width: 1344px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script src="../build/build.js"></script>
+    <script>
+    var el = document.getElementById('game')
+    var Img = require('image')
+
+    var a = Img('swpt_0.png')
+    console.assert(el.innerHTML === '')
+
+    el.appendChild(a)
+    console.assert(el.innerHTML === '<img src="swpt_0.png">')
+
+    el.appendChild(Img('swpt_1.png'))
+    console.assert(el.innerHTML === '<img src="swpt_0.png"><img src="swpt_1.png">')
+
+    el.appendChild(Img('swpt_2.png'))
+    el.appendChild(Img('swpt_3.png'))
+
+    console.assert(el.innerHTML === '<img src="swpt_0.png"><img src="swpt_1.png"><img src="swpt_2.png"><img src="swpt_3.png">')
+    </script>
+  </body>
+</html>
